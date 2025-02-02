@@ -1,0 +1,31 @@
+/* Incorrect usage of calc(), mixing pixels and percentages without proper conversion */
+.element {
+  width: calc(50% + 100px); /* Incorrect: mixes % and px */
+}
+
+/* Corrected usage: using only one unit type */
+.element {
+  width: calc(50% + 100px); /*Correct: uses pixels and percentages appropriately*/
+  /* Or convert to a single unit type (e.g., all pixels) */
+  width: calc((50vw / 100) * 100 + 100); /* All in pixels */
+}
+
+/* Incorrect operator precedence */
+.element {
+  width: calc(100px + 50% * 2); /* Incorrect: Multiplication is done before addition */
+}
+
+/* Corrected operator precedence using parentheses */
+.element {
+  width: calc(100px + (50% * 2)); /* Correct: Multiplication is done first */
+}
+
+/* Syntax Error in calc() */
+.element {
+  width: calc(100px + 50%);
+}
+
+/*Corrected Syntax Error*/
+.element {
+  width: calc(100px + 50%); /* Correct syntax*/
+}
