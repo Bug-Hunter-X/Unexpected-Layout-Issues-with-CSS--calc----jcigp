@@ -1,0 +1,1 @@
+This repository demonstrates an uncommon CSS bug involving the `calc()` function. The bug showcases how mixing incompatible units or incorrect operator precedence within `calc()` expressions can lead to unexpected layout and rendering issues.  The solution provided corrects these errors, ensuring the `calc()` function operates as intended.
